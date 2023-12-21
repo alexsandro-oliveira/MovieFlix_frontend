@@ -27,7 +27,7 @@ export const Container = styled.div`
 
 export const Form = styled.form`
   width: 100%;
-  margin: 23px auto;
+  margin: 0 auto;
   padding: 0 120px;
 
   .btnBack {
