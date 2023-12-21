@@ -41,13 +41,7 @@ export function CreateMovie() {
     if (!isRatingValid) {
       alert("É necessário dar uma nota entre 0 e 5 para cadastrar um filme.");
       return false;
-    }
-
-    if (newLink) {
-      return alert(
-        "Você deixou um link no campo para adicionar, mas não clicou em adicionar. Clique para adicionar ou deixe o campo vazio."
-      );
-    }
+    }    
 
     if (newTag) {
       return alert(
