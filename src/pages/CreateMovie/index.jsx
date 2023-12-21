@@ -37,7 +37,7 @@ export function CreateMovie() {
 
           <Section title="Marcadores">
             <div className="movieTags">
-              <MovieTag value="react" />
+              
               <MovieTag isNew placeholder="Novo marcador" />
             </div>
           </Section>
