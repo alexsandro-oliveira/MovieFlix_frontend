@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { FiArrowLeft, FiClock } from "react-icons/fi";
+import { FiArrowLeft, FiClock, FiTrash2 } from "react-icons/fi";
 import { useNavigate, useParams } from "react-router-dom";
 import avatarPlaceholder from "../../assets/avatar_placeholder.svg";
 import { Header } from "../../components/Header";
@@ -13,13 +13,21 @@ export function Preview() {
   const [data, setData] = useState(null);
   const { user } = useAuth();
 
+  const params = useParams();
   const navigate = useNavigate();
 
   function handleBack() {
     navigate(-1);
   }
 
-  const params = useParams();
+  async function handleRemove() {
+    const confirm = window.confirm("Deseja realmente remover este filme?");
+
+    if (confirm) {
+      await api.delete(`/movies/${params.id}`);
+      navigate(-1);
+    }
+  }
 
   const avatarUrl = user.avatar
     ? `${api.defaults.baseURL}/files/${user.avatar}`
@@ -43,12 +51,18 @@ export function Preview() {
       {data && (
         <main>
           <Content>
-            <div className="btnBack">
+            <div className="btn">
               <button type="button" onClick={handleBack}>
                 <FiArrowLeft />
                 Voltar
               </button>
+
+              <button type="button" onClick={handleRemove}>
+                <FiTrash2 />
+                Remover Filme
+              </button>
             </div>
+
             <div className="title">
               <h1>{data.title}</h1>
               <Rating

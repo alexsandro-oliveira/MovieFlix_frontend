@@ -34,8 +34,9 @@ export const Content = styled.div`
   display: flex;
   flex-direction: column;
 
-  .btnBack {
+  .btn {
     display: flex;
+    justify-content: space-between;
 
     button {
       color: ${({ theme }) => theme.COLORS.PINK};
