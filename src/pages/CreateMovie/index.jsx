@@ -31,7 +31,7 @@ export function CreateMovie() {
     setTags((prevState) => prevState.filter((tag) => tag !== deleted));
   }
 
-  async function handleNewNote() {
+  async function handleNewMovie() {
     if (!title) {
       return alert("Digite o título da nota");
     }
@@ -129,7 +129,7 @@ export function CreateMovie() {
             <Button
               className="changeMovie"
               title="Salvar alterações"
-              onClick={handleNewNote}
+              onClick={handleNewMovie}
             />
           </div>
         </Form>
