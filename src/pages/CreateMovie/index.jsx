@@ -121,6 +121,7 @@ export function CreateMovie() {
 
           <div className="buttonsWrapper">
             <Button
+              className="deleteMovie"
               title="Descartar alterações"
               highlighted={false}
               onClick={handleBack}
