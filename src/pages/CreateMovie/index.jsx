@@ -16,7 +16,7 @@ export function CreateMovie() {
   const [tags, setTags] = useState([]);
   const [newTag, setNewTag] = useState("");
 
-  const navigate = useNavigate;
+  const navigate = useNavigate();
 
   function handleBack() {
     navigate(-1);
