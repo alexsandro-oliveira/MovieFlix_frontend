@@ -33,7 +33,7 @@ export const Form = styled.form`
   .btnBack {
     display: flex;
 
-    a {
+    button {
       color: ${({ theme }) => theme.COLORS.PINK};
 
       svg {
