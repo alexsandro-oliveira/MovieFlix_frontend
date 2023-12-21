@@ -39,8 +39,7 @@ export function CreateMovie() {
     const isRatingValid = rating >= 0 && rating <= 5 && rating !== "";
 
     if (!isRatingValid) {
-      alert("É necessário dar uma nota entre 0 e 5 para cadastrar um filme.");
-      return false;
+      return alert("É necessário dar uma nota entre 0 e 5 para cadastrar um filme.");       
     }    
 
     if (newTag) {
